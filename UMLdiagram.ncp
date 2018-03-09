@@ -1,0 +1,379 @@
+<Project>
+  <Name>untitled</Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>untitled</Name>
+    <Language>Java</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>Board</Name>
+        <Access>Public</Access>
+        <Location left="1495" top="91" />
+        <Size width="287" height="475" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public static Board game</Member>
+        <Member type="Field">private int number_of_hand</Member>
+        <Member type="Field">private List&lt;Hand&gt; hands</Member>
+        <Member type="Field">private BufferedWriter writer</Member>
+        <Member type="Field">private BufferedReader reader</Member>
+        <Member type="Field">private InformHandler hendler</Member>
+        <Member type="Method">public static void main(String[] args)</Member>
+        <Member type="Method">private void run()</Member>
+        <Member type="Method">private void handShake()</Member>
+        <Member type="Method">public void initialization()</Member>
+        <Member type="Method">public void menu()</Member>
+        <Member type="Method">public Player[] getPlayers()</Member>
+        <Member type="Method">public int getNumber_of_hand()</Member>
+        <Member type="Method">public List&lt;Hand&gt; getHands()</Member>
+        <Member type="Method">public BufferedWriter getWriter()</Member>
+        <Member type="Method">public BufferedReader getReader()</Member>
+        <Member type="Method">public InformHandler getHandler()</Member>
+        <Member type="Method">public void setPlayers(Player[] players)</Member>
+        <Member type="Method">public void setNumber_of_hand(int number_of_hand)</Member>
+        <Member type="Method">public void setHands(List&lt;Hand&gt; hands)</Member>
+        <Member type="Method">public void setWriter(BufferedWriter writer)</Member>
+        <Member type="Method">public void setReader(BufferedReader reader)</Member>
+        <Member type="Method">public void setHandler(InformHandler handler)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>InformHandler</Name>
+        <Access>Public</Access>
+        <Location left="1431" top="697" />
+        <Size width="399" height="485" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private Player[] players</Member>
+        <Member type="Field">private List&lt;Hand&gt; hands</Member>
+        <Member type="Field">private BufferedWriter writer</Member>
+        <Member type="Field">private boolean isOutputToFile</Member>
+        <Member type="Constructor">public InformHandler(Player[] players, List&lt;Hand&gt; hands)</Member>
+        <Member type="Method">private void print(String s)</Member>
+        <Member type="Method">public void getDataAPI1(String handNumber)</Member>
+        <Member type="Method">public void getDataAPI2(String handNumber)</Member>
+        <Member type="Method">public void getDataAPI3(String handNumber)</Member>
+        <Member type="Method">public void getDataAPI4(String handNumber)</Member>
+        <Member type="Method">public void getDataAPI5(String handNumber)</Member>
+        <Member type="Method">public void getDataAPI6(String handNumber)</Member>
+        <Member type="Method">public void getDataAPI7(String playerName, String handNumber)</Member>
+        <Member type="Method">public void getDataAPI8(String playerName, String handNumber)</Member>
+        <Member type="Method">public void getDataAPI9(String playerName, String handNumber)</Member>
+        <Member type="Method">public void getDataAPI10(String handNumber)</Member>
+        <Member type="Method">public Player[] getPlayers()</Member>
+        <Member type="Method">public List&lt;Hand&gt; getHands()</Member>
+        <Member type="Method">public BufferedWriter getWriter()</Member>
+        <Member type="Method">public boolean isOutputToFile()</Member>
+        <Member type="Method">public void setPlayers(Player[] players)</Member>
+        <Member type="Method">public void setHands(List&lt;Hand&gt; hands)</Member>
+        <Member type="Method">public void setWriter(BufferedWriter writer)</Member>
+        <Member type="Method">public void setOutputToFile(boolean outputToFile)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Card</Name>
+        <Access>Public</Access>
+        <Location left="1203" top="1653" />
+        <Size width="455" height="315" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private SuitCard suitCard</Member>
+        <Member type="Field">private TypeCard typeCard</Member>
+        <Member type="Field">private int indexSuit</Member>
+        <Member type="Field">private int indexCard</Member>
+        <Member type="Field">private String nameCard</Member>
+        <Member type="Constructor">Card(SuitCard suitCard, TypeCard typeCard, int indexSuit, int indexCard)</Member>
+        <Member type="Constructor">Card(String nameCard, int indexCard)</Member>
+        <Member type="Method">public int compareTo(Card o)</Member>
+        <Member type="Method">public TypeCard getTypeCard()</Member>
+        <Member type="Method">public SuitCard getSuitCard()</Member>
+        <Member type="Method">public int getIndexSuit()</Member>
+        <Member type="Method">public int getIndexCard()</Member>
+        <Member type="Method">public String getNameCard()</Member>
+        <Member type="Method">public String toString()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Hand</Name>
+        <Access>Public</Access>
+        <Location left="862" top="685" />
+        <Size width="419" height="740" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private static int id</Member>
+        <Member type="Field">private final int idHand</Member>
+        <Member type="Field">private Player[] players</Member>
+        <Member type="Field">private List&lt;Card&gt; deckForAuction</Member>
+        <Member type="Field">private List&lt;Card&gt; deckForHand</Member>
+        <Member type="Field">private Player playerOrder</Member>
+        <Member type="Field">private int trump</Member>
+        <Member type="Field">private StringBuilder datebase</Member>
+        <Member type="Field">private BufferedWriter writer</Member>
+        <Member type="Field">private boolean isOutputToFile</Member>
+        <Member type="Constructor">public Hand(Player[] players)</Member>
+        <Member type="Method">private void print(String s)</Member>
+        <Member type="Method">public void playersShowCards()</Member>
+        <Member type="Method">public void Auction()</Member>
+        <Member type="Method">public void buyInAndReset()</Member>
+        <Member type="Method">public void finalOrderPlayer()</Member>
+        <Member type="Method">public void vistOrPas()</Member>
+        <Member type="Method">public void game()</Member>
+        <Member type="Method">public void resultHand()</Member>
+        <Member type="Method">public void printResults()</Member>
+        <Member type="Method">public List&lt;Card&gt; getDeckForAuction()</Member>
+        <Member type="Method">public StringBuilder getDatebase()</Member>
+        <Member type="Method">public Player getPlayerOrder()</Member>
+        <Member type="Method">public int getTrump()</Member>
+        <Member type="Method">public static int getId()</Member>
+        <Member type="Method">public int getIdHand()</Member>
+        <Member type="Method">public Player[] getPlayers()</Member>
+        <Member type="Method">public List&lt;Card&gt; getDeckForHand()</Member>
+        <Member type="Method">public BufferedWriter getWriter()</Member>
+        <Member type="Method">public boolean isOutputToFile()</Member>
+        <Member type="Method">public static void setId(int id)</Member>
+        <Member type="Method">public void setPlayers(Player[] players)</Member>
+        <Member type="Method">public void setDeckForAuction(List&lt;Card&gt; deckForAuction)</Member>
+        <Member type="Method">public void setDeckForHand(List&lt;Card&gt; deckForHand)</Member>
+        <Member type="Method">public void setPlayerOrder(Player playerOrder)</Member>
+        <Member type="Method">public void setTrump(int trump)</Member>
+        <Member type="Method">public void setDatebase(StringBuilder datebase)</Member>
+        <Member type="Method">public void setWriter(BufferedWriter writer)</Member>
+        <Member type="Method">public void setOutputToFile(boolean outputToFile)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Deck</Name>
+        <Access>Public</Access>
+        <Location left="1733" top="1653" />
+        <Size width="329" height="624" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public static int VIST</Member>
+        <Member type="Field">public static int PAS</Member>
+        <Member type="Field">public static int MISER</Member>
+        <Member type="Field">public static int SPADES</Member>
+        <Member type="Field">public static int CLUBS</Member>
+        <Member type="Field">public static int DIAMONDS</Member>
+        <Member type="Field">public static int HEARTS</Member>
+        <Member type="Field">public static int SIX</Member>
+        <Member type="Field">public static int SEVEN</Member>
+        <Member type="Field">public static int EIGHT</Member>
+        <Member type="Field">public static int NINE</Member>
+        <Member type="Field">public static int TEN</Member>
+        <Member type="Field">public static int JACK</Member>
+        <Member type="Field">public static int QUEEN</Member>
+        <Member type="Field">public static int KING</Member>
+        <Member type="Field">public static int ACE</Member>
+        <Member type="Field">public static Card vist</Member>
+        <Member type="Field">public static Card pas</Member>
+        <Member type="Field">public static Card miser</Member>
+        <Member type="Field">public static List&lt;Card&gt; deck</Member>
+        <Member type="Constructor">private Deck()</Member>
+        <Member type="Method">public void newMethod()</Member>
+        <Member type="Method">public static List&lt;Card&gt; deleteMinCard(List&lt;Card&gt; cards, int numberCards)</Member>
+        <Member type="Method">public static int getSuitMax(List&lt;Card&gt; cards)</Member>
+        <Member type="Method">public static List&lt;Card&gt; deleteMaxCard(List&lt;Card&gt; cards, int numberCards)</Member>
+        <Member type="Method">public static void sortDeck(List&lt;Card&gt; deck)</Member>
+        <Member type="Method">public static void sortDeckWithTrump(List&lt;Card&gt; deck, int trump)</Member>
+        <Member type="Method">public static void mix(List&lt;Card&gt; cards, int max)</Member>
+        <Member type="Method">public static List&lt;Card&gt; getDeckForAuction()</Member>
+        <Member type="Method">public static List&lt;Card&gt; getDeckForHand()</Member>
+        <Member type="Method">public static List&lt;Card&gt; getCardsFromTheDeck(List&lt;Card&gt; cards, int number)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Player</Name>
+        <Access>Public</Access>
+        <Location left="1965" top="697" />
+        <Size width="311" height="689" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private String name</Member>
+        <Member type="Field">private int aggression</Member>
+        <Member type="Field">private List&lt;Card&gt; cards</Member>
+        <Member type="Field">private List&lt;Player&gt; opponents</Member>
+        <Member type="Field">private Hand currentHand</Member>
+        <Member type="Field">private Card playerOrder</Member>
+        <Member type="Field">private int orderIndex</Member>
+        <Member type="Field">private Map&lt;String, Integer&gt; bullet</Member>
+        <Member type="Constructor">Player(String name, int aggression)</Member>
+        <Member type="Method">public void getOrger()</Member>
+        <Member type="Method">public List&lt;Card&gt; resetCards(int number)</Member>
+        <Member type="Method">public void finalOrder()</Member>
+        <Member type="Method">public void getVistOrPas()</Member>
+        <Member type="Method">public Card getCard(Card c)</Member>
+        <Member type="Method">public boolean takeBribe(List&lt;Card&gt; cards)</Member>
+        <Member type="Method">public void updateBullet()</Member>
+        <Member type="Method">public boolean isDoneOrder()</Member>
+        <Member type="Method">public void reset()</Member>
+        <Member type="Method">public void initializationBullet()</Member>
+        <Member type="Method">public String getName()</Member>
+        <Member type="Method">public int getAggression()</Member>
+        <Member type="Method">public List&lt;Card&gt; getCards()</Member>
+        <Member type="Method">public Hand getCurrentHand()</Member>
+        <Member type="Method">public Card getPlayerOrder()</Member>
+        <Member type="Method">public int getOrderIndex()</Member>
+        <Member type="Method">public List&lt;Player&gt; getOpponents()</Member>
+        <Member type="Method">public void setName(String name)</Member>
+        <Member type="Method">public void setAggression(int aggression)</Member>
+        <Member type="Method">public void setCards(List&lt;Card&gt; cards)</Member>
+        <Member type="Method">public void setCurrentHand(Hand currentHand)</Member>
+        <Member type="Method">public void setPlayerOrder(Card playerOrder)</Member>
+        <Member type="Method">public void setOrderIndex(int orderIndex)</Member>
+        <Member type="Method">public void setOpponents(List&lt;Player&gt; opponents)</Member>
+        <Member type="Method">public void addOpponent(Player opponent)</Member>
+        <Member type="Method">public Map&lt;String, Integer&gt; getBullet()</Member>
+        <Member type="Method">public String toString()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Enum">
+        <Name>TypeCard</Name>
+        <Access>Public</Access>
+        <Location left="1233" top="2061" />
+        <Size width="162" height="214" />
+        <Collapsed>False</Collapsed>
+        <Value>SIX</Value>
+        <Value>SEVEN</Value>
+        <Value>EIGHT</Value>
+        <Value>NINE</Value>
+        <Value>TEN</Value>
+        <Value>JACK</Value>
+        <Value>QUEEN</Value>
+        <Value>KING</Value>
+        <Value>ACE</Value>
+      </Entity>
+      <Entity type="Enum">
+        <Name>SuitCard</Name>
+        <Access>Public</Access>
+        <Location left="1471" top="2077" />
+        <Size width="162" height="129" />
+        <Collapsed>False</Collapsed>
+        <Value>DIAMONDS</Value>
+        <Value>HEARTS</Value>
+        <Value>SPADES</Value>
+        <Value>CLUBS</Value>
+      </Entity>
+    </Entities>
+    <Relationships>
+      <Relationship type="Association" first="0" second="1">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="3" second="5">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1358</X>
+          <Y>1252</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1852</X>
+          <Y>1252</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="0" second="3">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1458</X>
+          <Y>330</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="0" second="5">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1836</X>
+          <Y>332</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>2172</X>
+          <Y>672</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="1" second="3">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="1" second="5">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="5" second="4">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>2156</X>
+          <Y>1590</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="3" second="2">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="3" second="4">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="5" second="4">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>2062</X>
+          <Y>1413</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>2024</X>
+          <Y>1555</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="5" second="2">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>2062</X>
+          <Y>1436</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1528</X>
+          <Y>1532</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="2" second="6">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="2" second="7">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="4" second="2">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+</Project>
